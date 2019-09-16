@@ -8,6 +8,6 @@ if rank == 0:
     comm.send(data,dest=1,tag=11)
 
 if rank == 1:
-    atad = comm.rec(source=0,tag=11)
+    atad = comm.recv(source=0,tag=11)
     print(atad)
 
