@@ -5,9 +5,9 @@ rank = comm.Get_rank()
 
 if rank == 0:
     data = [1,2,3]
-    comm.send(data,dest=1,tag=11)
+    comm.send(data,dest=1,tag='test')
 
 if rank == 1:
-    atad = comm.recv(source=0,tag=11)
+    atad = comm.recv(source=0,tag='test')
     print(atad)
 
